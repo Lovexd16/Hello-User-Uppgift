@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medlemmar</title>
+</head>
+<body>
+    <h1>Medlemmar</h1>
+    <ul>
+        <li th:each="member : ${members}"> <!--Loopar listan med th:each-->
+            Namn: <span th:text="${member.memberName}"></span> - Email: <span th:text="${member.memberEmail}"></span> <!--Visar namn och email i listan-->
+            <a th:href="@{remove-member/{id}(id=${member.memberId})}">[X]</a> <!--X länk för att ta bort från listan med ID-->
+        </li>
+    </ul>
+
+    <a href="/form">Lägg till medlemmar</a>
+    <a href="/">Startsida</a>
+</body>
+</html>
