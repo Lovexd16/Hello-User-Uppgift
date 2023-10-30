@@ -4,17 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medlemmar</title>
+    <script src="member.js" defer></script>
 </head>
 <body>
     <h1>Medlemmar</h1>
     <ul>
         <li th:each="member : ${members}"> <!--Loopar listan med th:each-->
             Namn: <span th:text="${member.memberName}"></span> - Email: <span th:text="${member.memberEmail}"></span> <!--Visar namn och email i listan-->
-            <a th:href="@{remove-member/{id}(id=${member.memberId})}">[X]</a> <!--X länk för att ta bort från listan med ID-->
+            <a class="delete-member-link" th:href="@{remove-member/{id}(id=${member.memberId})}">[X]</a> <!--X länk för att ta bort från listan med ID.
+                Class så jag kan dölja/visa beroende på inloggning i member.js-->
         </li>
     </ul>
 
     <a href="/form">Lägg till medlemmar</a><br/>
-    <a href="/">Startsida</a>
+    <a href="/">Startsida</a><br/>
+    <a href="/login">Logga in</a>
 </body>
 </html>

@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lägg till medlemmar</title>
-    <script src="adminAccess.js" defer></script>
+    <script src="form.js" defer></script> <!--Länk till javascript filen-->
 </head>
 <body>
-    <h1 id="notLoggedInMessage">Du kan inte använda denna sida då du inte är inloggad!</h1>
-    <div id="adminAccess">
+    <h1 id="notLoggedInMessage">Du kan inte använda denna sida då du inte är inloggad!</h1> <!--En h1 med id som jag använder i form.js för att visa bara om admin inte finns i localStorage-->
+    <div id="adminAccess"> <!--Lägger innehållet i en div med id så jag i form.js kan avgöra om det ska visas eller inte beroende på om man är inloggad-->
     <h1>Lägg till medlemmar</h1>
         <!--Input fält om knapp för att lägga till ny medlem-->
         <form method="post" th:action="@{/new-member}" th:object="${newMember}">
@@ -20,6 +20,7 @@
 
     <!--Länkar till de andra html sidorna-->
     <a href="/member">Se medlemmar</a><br/>
-    <a href="/">Startsida</a>    
+    <a href="/">Startsida</a><br/>
+    <a href="/login">Logga in</a>
 </body>
 </html>
