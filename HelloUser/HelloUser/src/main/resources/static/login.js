@@ -1,7 +1,6 @@
-const loginBtn = document.getElementById("loginBtn");
+let loginBtn = document.getElementById("loginBtn");
 
 loginBtn.addEventListener("click", function() {
-    console.log("Klick på knapp");
 
     let username = document.getElementById("username").value;
     let password = document.getElementById("password").value;

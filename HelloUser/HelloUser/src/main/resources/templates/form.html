@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lägg till medlemmar</title>
+    <script src="adminAccess.js" defer></script>
 </head>
 <body>
+    <h1 id="notLoggedInMessage">Du kan inte använda denna sida då du inte är inloggad!</h1>
+    <div id="adminAccess">
     <h1>Lägg till medlemmar</h1>
-    <div>
         <!--Input fält om knapp för att lägga till ny medlem-->
         <form method="post" th:action="@{/new-member}" th:object="${newMember}">
             <input type="text" th:field="*{memberName}" placeholder="Skriv medlemmens namn"/><br/>
@@ -17,7 +19,7 @@
     </div>
 
     <!--Länkar till de andra html sidorna-->
-    <a href="/member">Se medlemmar</a>
+    <a href="/member">Se medlemmar</a><br/>
     <a href="/">Startsida</a>    
 </body>
 </html>
