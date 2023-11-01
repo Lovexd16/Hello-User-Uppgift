@@ -15,6 +15,8 @@ public class Member {
         this.memberId = memberId;
     }
 
+    //Getters och Setters
+
     public String getMemberName() {
         return memberName;
     }

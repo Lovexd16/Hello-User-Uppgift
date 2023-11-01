@@ -7,7 +7,11 @@
     <script src="form.js" defer></script> <!--Länk till javascript filen-->
 </head>
 <body>
-    <h1 id="notLoggedInMessage">Du kan inte använda denna sida då du inte är inloggad!</h1> <!--En h1 med id som jag använder i form.js för att visa bara om admin inte finns i localStorage-->
+    <div id="notLoggedInMessage"> <!--En div med id som jag använder i form.js för att visa bara om admin inte finns i localStorage-->
+    <h1>Du kan inte använda denna sida då du inte är inloggad!</h1>
+    <p>Tryck på "Logga in" länken för att logga in!</p>
+    </div>
+
     <div id="adminAccess"> <!--Lägger innehållet i en div med id så jag i form.js kan avgöra om det ska visas eller inte beroende på om man är inloggad-->
     <h1>Lägg till medlemmar</h1>
         <!--Input fält om knapp för att lägga till ny medlem-->
